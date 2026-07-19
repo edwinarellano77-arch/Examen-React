@@ -1,0 +1,52 @@
+.jugador-list {
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    padding: 34px 0 70px;
+}
+
+.grid-jugadores {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 26px;
+}
+
+.estado-contenedor {
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    color: var(--suave);
+    font-size: 1.05rem;
+}
+
+.spinner {
+    width: 56px;
+    height: 56px;
+    border: 6px solid #d1fae5;
+    border-top-color: var(--verde);
+    border-radius: 50%;
+    animation: girar 0.8s linear infinite;
+}
+
+.error-box {
+    padding: 18px 26px;
+    color: #b91c1c;
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 14px;
+    font-weight: 600;
+}
+
+@keyframes girar {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-jugadores {
+        grid-template-columns: 1fr;
+    }
+}

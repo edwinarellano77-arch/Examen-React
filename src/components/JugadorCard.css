@@ -1,0 +1,121 @@
+.jugador-card {
+    position: relative;
+    padding: 22px 20px 18px;
+    overflow: hidden;
+    background: var(--card);
+    border: 1px solid var(--borde);
+    border-radius: 20px;
+    box-shadow: var(--sombra);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.jugador-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--verde), var(--acento));
+}
+
+.jugador-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 22px 45px rgba(15, 23, 42, 0.16);
+    border-color: #bbf7d0;
+}
+
+.jugador-card-numero {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    min-width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    color: var(--tinta);
+    background: #f1f5f9;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.jugador-card-imagen {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto 4px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ecfdf5;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.25);
+    background: #f8fafc;
+}
+
+.jugador-card-avatar {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--verde), var(--verde-osc));
+    border-radius: 50%;
+    border: 4px solid #ecfdf5;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+}
+
+.jugador-card h2 {
+    margin: 12px 0 8px;
+    color: var(--tinta);
+    text-align: center;
+    font-size: 1.15rem;
+    letter-spacing: -0.01em;
+}
+
+.jugador-posicion {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.jugador-tag {
+    padding: 5px 16px;
+    color: var(--verde-osc);
+    background: #d1fae5;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.jugador-datos {
+    display: grid;
+    padding: 6px 14px;
+    background: #f8fafc;
+    border-radius: 14px;
+    color: var(--texto);
+    font-size: 0.92rem;
+}
+
+.jugador-datos p {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px solid #eef2f7;
+}
+
+.jugador-datos p:last-child {
+    border-bottom: none;
+}
+
+.jugador-datos strong {
+    color: var(--suave);
+    font-weight: 600;
+}
